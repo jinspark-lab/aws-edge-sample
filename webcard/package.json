@@ -1,0 +1,22 @@
+{
+    "name": "webapp",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "dependencies": {
+        "cookie-parser": "latest",
+        "ejs": "latest",
+        "express": "latest",
+        "express-session": "latest",
+        "express-winston": "latest",
+        "request": "latest",
+        "socket.io": "latest",
+        "winston": "latest"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "jinspark"
+}

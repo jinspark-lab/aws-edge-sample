@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        function onClickNewGame() {
+            console.log("On Click New Game");
+            $.get("/match", function (data, status) {
+                console.log(data);
+
+                setTimeout(function poller () {
+                    console.log("Polling");
+                    $.get("/status", function (data, status) {
+                        if (data.ip) {
+                            clearTimeout(poller);
+                            console.log("Clear Timedout");
+                            window.location.href = "http://" + data.ip + ":" + data.port;
+                        } else {
+                        }
+                    });
+                    setTimeout(poller, 1000);
+                }, 1000);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div style="text-align: center;">
+
+        <!-- 블랙잭은 아니고 그냥 21에 가까운 사람이 이기는 게임 -->
+        <h1>Welcome to PvP Blackjack like Cardgame</h1>
+        <p>The player who is the closest to 21 will win the game.</p>
+        <button id="new-game-button" onclick="onClickNewGame()">New Game!</button>
+        <!-- <button id="status-button" onclick="onClickNewGame()">New Game!</button> -->
+    </div>
+</body>
+
+</html>
