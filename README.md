@@ -14,3 +14,11 @@ This repository is for cardgame 21. Have fun!
 
 5. Have Fun!
 
+# On AWS
+
+1. Start init.sh Script on Matchmaker
+
+2. Start init.sh Script on Game Servers
+
+3. Have Fun!
+
