@@ -18,7 +18,7 @@ Pull requests are always welcome. For major changes, please open an issue first 
 
 ## Architecture
 
-![Image](https://d1zrwss8zuawdm.cloudfront.net/webcard21-architecture.png)
+![Image](https://d1zrwss8zuawdm.cloudfront.net/webcard21-architecture1.png)
 
 This architecture shows how to implement game servers for Global Service.
 
