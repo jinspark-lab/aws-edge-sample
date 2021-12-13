@@ -4,12 +4,13 @@
     "description": "",
     "main": "app.js",
     "dependencies": {
+        "aws-sdk": "^2.1028.0",
         "cookie-parser": "latest",
         "express": "latest",
-        "express-session": "latest",
         "express-winston": "latest",
         "request": "latest",
-        "winston": "latest"
+        "winston": "latest",
+        "cors": "latest"
     },
     "devDependencies": {},
     "scripts": {

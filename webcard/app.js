@@ -56,11 +56,16 @@ io.on('connection', function (socket) {
     });
 
 	socket.on('forceDisconnect', function () {
+		console.log('User disconnected: ' + socket.name);
+		var status = game.gameInit();
+		io.emit('serverClose', status);
 		socket.disconnect();
 	});
 
 	socket.on('disconnect', function () {
 		console.log('User disconnected: ' + socket.name);
+		var status = game.gameInit();
+		io.emit('serverClose', status);
 	});
 
 });

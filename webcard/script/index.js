@@ -158,6 +158,12 @@ $(function () {
         // setWaitingUI();
     });
 
+    socket.on("serverClose", function (data) {
+        updatePlayStatus(data);
+        updateTurnStatus(data);
+        socket.close();
+    });
+
     hitButton.addEventListener('click', function () {
 
         var msgData = {

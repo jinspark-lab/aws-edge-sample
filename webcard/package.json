@@ -11,7 +11,8 @@
         "express-winston": "latest",
         "request": "latest",
         "socket.io": "latest",
-        "winston": "latest"
+        "winston": "latest",
+        "cors": "latest"
     },
     "devDependencies": {},
     "scripts": {

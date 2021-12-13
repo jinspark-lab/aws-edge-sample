@@ -7,14 +7,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript">
 
+        function getUrlParams() {     
+            var params = {};  
+            
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, 
+                function(str, key, value) { 
+                    params[key] = value; 
+                }
+            );            
+            return params; 
+        }
+
+        var token = '';
+        window.onload = function() {
+            param = getUrlParams();
+            token = param.jwt;
+        }
+
         function onClickNewGame() {
             console.log("On Click New Game");
-            $.get("/match", function (data, status) {
+            $.post("/match?jwt=" + token, function (data, status) {
                 console.log(data);
 
                 setTimeout(function poller () {
                     console.log("Polling");
-                    $.get("/status", function (data, status) {
+                    $.post("/status?jwt=" + token, function (data, status) {
                         if (data.ip) {
                             clearTimeout(poller);
                             console.log("Clear Timedout");

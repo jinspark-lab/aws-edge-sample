@@ -1,8 +1,11 @@
 
 const express = require('express');
-const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const app = express();
+var AWS = require("aws-sdk");
+var ec2 = new AWS.EC2({ region: 'us-east-1' });
+var systemsmanager = new AWS.SSM({ region: 'us-east-1' });
+var globalaccelerator = new AWS.GlobalAccelerator({ region: 'us-west-2' });
 
 app.use(express.json());
 app.use(express.urlencoded({
@@ -10,70 +13,105 @@ app.use(express.urlencoded({
 }));
 app.use(cookieParser());
 
-//Memory Session
-app.use(session({
-	secret: 'keyboard cat',
-	resave: false,
-	saveUninitialized: true,
-	cookie: {
-		maxAge: 5 * 60 * 1000
-	}
-}));
-//
-
 match = [];
 games = {};
 var gameId = 0;
 
-app.get('/', function (req, res) {
-	if (req.session.user) {
+var avialbleEndpoint = {};
 
-	} else {
-		req.session.user = {
-			id: Date.now(),
-			authorized: true
-		}
-	}
+app.get('/', function (req, res) {
 	res.sendFile(__dirname + "/views/index.html");
 });
 
-app.get('/match', function (req, res) {
-	if (req.session.user) {
-		console.log('Matchmaker Called - req :' + req);
+app.post('/match', function (req, res) {
+	var playerId = req.header('playerid');
+	match.push(playerId);
 
-		var playerId = req.session.user.id;
-		match.push(playerId);
+	findRoutePath();
 
-		if (match.length % 2 == 0) {
-			for (var player in match) {
-				games[match[player]] = gameId;
-			}
-			gameId++;
-			match = [];
+	if (match.length % 2 == 0) {
+		for (var player in match) {
+			games[match[player]] = gameId;
 		}
-		res.sendStatus(200);
+		gameId++;
+		match = [];
+	}
+	res.sendStatus(200);
+});
+
+app.post('/status', function (req, res) {
+	var playerId = req.header('playerid');
+
+	if (playerId in games) {
+		res.json(avialbleEndpoint);
 	} else {
-		res.redirect('/');
+		res.json({ });
 	}
 });
 
-app.get('/status', function (req, res) {
-	if (req.session.user) {
-		// console.log("Players---");
-		// console.log(players);
-		console.log("Games---");
-		console.log(games);
-		console.log("User ID");
-		console.log(req.session.user.id);
-		if (req.session.user.id in games) {
-			res.json({ ip: '127.0.0.1', port: 3000 });
+var findRoutePath = function() {
+	var parameter = {
+		"Name": "webcardSubnetId"
+	};
+	systemsmanager.getParameter(parameter, function(err, data) {
+		if (err) {
+			console.log(err, err.stack);
 		} else {
-			res.json({ });
+			searchAvailableEndpoint(data.Parameter.Value);
 		}
-	} else {
-		res.redirect('/');
-	}
-});
+	});
+}
+
+var searchAvailableEndpoint = function(subnetid) {
+	var params = {
+		Filters: [
+			{
+				Name: "subnet-id",
+				Values: [
+					subnetid
+				]
+			}
+		]
+	};
+	ec2.describeInstances(params, function (err, data) {
+		if (err) {
+			console.log(err, err.stack);
+		} else {
+			var reservations = data.Reservations;
+			var valids = [];
+
+			//Find valid Ec2 instances
+			for (var i in reservations) {
+				var instances = reservations[i].Instances;
+				for (var j in instances) {
+					if (instances[j].State.Name == "running") {
+						valids.push(instances[j].PrivateIpAddress);
+					}
+				}
+			}
+
+			//Get random valid instance
+			var randAddress = Math.floor(Math.random() * valids.length);
+
+			var agaParams = {
+				EndpointId: subnetid,
+				DestinationAddress: valids[randAddress]
+			}
+			globalaccelerator.listCustomRoutingPortMappingsByDestination(agaParams, function (err, data) {
+				if (err) {
+					console.log(err, err.stack);
+				} else {
+					console.log(data);
+					var connectionInfo = {
+						ip: data.DestinationPortMappings[0].AcceleratorSocketAddresses[0].IpAddress,
+						port: data.DestinationPortMappings[0].AcceleratorSocketAddresses[0].Port
+					}
+					avialbleEndpoint = connectionInfo;
+				}
+			});
+		}
+	});
+}
 
 var server = app.listen(80, function () {
 	var host = server.address().address;

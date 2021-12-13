@@ -12,6 +12,19 @@ let gameManager = {
     deck: []
 };
 
+module.exports.gameInit = function () {
+    gameManager = {
+        gameStart: false,
+        gameOver: false,
+        playWon: '',
+        playTurn: '',
+        players: {
+        },
+        deck: []
+    }
+    return gameManager;
+}
+
 module.exports.acceptPlayer = function (clientId) {
     console.log("Accept New Player, clientId=" + clientId);
 
