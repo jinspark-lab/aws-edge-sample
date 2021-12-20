@@ -1,4 +1,4 @@
-# WebCard21 
+# Building WebCard game based on AWS
 
 WebCard21 is an Web-based 1:1 BlackJack game. Have Fun!
 
@@ -273,7 +273,8 @@ Value : <Subnet ID of Game server's subnet>
 (7) Run your game
 
 - Access to the CloudFront domain with JWT. You can make proper token from [JWT.IO](https://jwt.io/)
-Default Secret Key is "LzdWGpAToQ1DqYuzHxE6YOqi7G3X2yvNBot9mCXfx5k". You can create your own token from it. (If you are preparing production workload, please consider how to manage Secret Key securely)
+Default Secret Key is "LzdWGpAToQ1DqYuzHxE6YOqi7G3X2yvNBot9mCXfx5k". You can create your own token from it. If you use your own secret key, you should fix the code inside of CloudFront Function. (If you are preparing production workload, please consider how to manage Secret Key securely)        
+(ex) xxx.cloudfront.net?jwt=To.Ke.n
 
 - When you access to the matchmaker, Click the "New Game!" Button.
 
@@ -285,4 +286,4 @@ Default Secret Key is "LzdWGpAToQ1DqYuzHxE6YOqi7G3X2yvNBot9mCXfx5k". You can cre
 
 - Have fun!
 
-If you have any queries & issues, please feel free to contact me. :) 
+If you have any queries & issues, please feel free to contact me through this repository or email(jinspark@amazon.com). :) 
