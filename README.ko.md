@@ -202,6 +202,8 @@ function handler(event) {
 
 - Publish Tab 을 클릭합니다. 함수를 앞에서 생성한 CloudFront Distribution 에 Association 합니다.
 
+![CF2](https://d1zrwss8zuawdm.cloudfront.net/webcard21-cf2.png)
+
 - 연동된 CloudFront Distributions 에 함수를 Publish 해야합니다.
 
 (4) 게임 서버 만들기
@@ -262,6 +264,8 @@ Value : <Subnet ID of Game server's subnet>
 - Custom Routing accelerator 를 생성합니다.
 
 - 다음 Port 범위 (1001 - 9999)와 TCP 를 프로토콜로 지정하여 Listener 를 생성합니다.
+
+![AGA](https://d1zrwss8zuawdm.cloudfront.net/webcard21-aga.png)
 
 - 엔드포인트를 생성하고 엔드포인트 그룹에 포함시킵니다. 게임 서버가 위치한 Subnet 의 ID 를 명시합니다.
 

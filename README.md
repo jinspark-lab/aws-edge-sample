@@ -204,6 +204,8 @@ You can also copy & paste the code from cf2.js.
 
 - Click Publish Tab. And Associate the CloudFront Distribution made above.
 
+![CF2](https://d1zrwss8zuawdm.cloudfront.net/webcard21-cf2.png)
+
 - Also you should Publish the function to the associated CloudFront Distributions.
 
 (4) Create Game Server
@@ -265,6 +267,8 @@ Value : <Subnet ID of Game server's subnet>
 - Create Custom Routing accelerator. 
 
 - Add Listener with Port range (1001 - 9999) and TCP port.
+
+![AGA](https://d1zrwss8zuawdm.cloudfront.net/webcard21-aga.png)
 
 - Add Endpoint to the Endpoint Group. Specify subnet id of game servers'.
 
