@@ -18,6 +18,76 @@
   </url>
   
   <url>
+    <loc>/aws-web-card/ko/matchmaker/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-web-card/en/matchmaker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-web-card/ko/matchmaker/"
+                />
+  </url>
+  
+  <url>
+    <loc>/aws-web-card/ko/cloudfront/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-web-card/en/cloudfront/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-web-card/ko/cloudfront/"
+                />
+  </url>
+  
+  <url>
+    <loc>/aws-web-card/ko/gameserver/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-web-card/en/gameserver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-web-card/ko/gameserver/"
+                />
+  </url>
+  
+  <url>
+    <loc>/aws-web-card/ko/globalaccelerator/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-web-card/en/globalaccelerator/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-web-card/ko/globalaccelerator/"
+                />
+  </url>
+  
+  <url>
+    <loc>/aws-web-card/ko/gameplay/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-web-card/en/gameplay/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-web-card/ko/gameplay/"
+                />
+  </url>
+  
+  <url>
     <loc>/aws-web-card/ko/categories/</loc>
     <xhtml:link
                 rel="alternate"

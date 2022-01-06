@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/aws-web-card/en/images/favicon.png" type="image/png">
 
-    <title>Edge Service HoL :: Making global games using AWS Edge services</title>
+    <title>Play the Game :: Making global games using AWS Edge services</title>
 
     
     <link href="/aws-web-card/en/css/nucleus.css?1641434890" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/aws-web-card/en/">
+  <body class="" data-url="/aws-web-card/en/gameplay/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -184,8 +184,8 @@
   
     
     <li data-nav-id="/aws-web-card/en/gameplay/" title="Play the Game" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/aws-web-card/en/gameplay/">
@@ -225,7 +225,7 @@
                   
                     
                     
-                      <option id="en" value="/aws-web-card/en/" selected>English</option>
+                      <option id="en" value="/aws-web-card/en/gameplay/" selected>English</option>
                     
                   
               
@@ -239,7 +239,7 @@
                   
                     
                     
-                      <option id="ko" value="/aws-web-card/ko/">한국어</option>
+                      <option id="ko" value="/aws-web-card/ko/gameplay/">한국어</option>
                     
                   
               
@@ -279,6 +279,39 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/aws-web-card/en/'>Edge Service HoL</a> > Play the Game
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
@@ -291,54 +324,42 @@
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h1 id="building-global-webcard-game-based-on-aws">Building Global WebCard game based on AWS</h1>
+
+	<h1 id="game-play">Game Play</h1>
 <hr>
-<p>WebCard is an Web-based 1:1 BlackJack game.
-You are able to launch this game globally, and play card games with global players.
-Have Fun!</p>
-<p>Not only source codes for the web-based game, but it also includes AWS best practices to implement online game routing features.</p>
-<p>This sample includes how to use AWS Edge services for routing web-based persistent games.
-Using Edge services helps you to minimize end-user latency for your game service.</p>
-<p>It includes as follows:</p>
-<ul>
-<li>Amazon CloudFront</li>
-<li>Amazon CloudFront Function</li>
-<li>AWS Global Accelerator Custom Routing</li>
-<li>AWS Systems Manager</li>
-</ul>
-<p>Pull requests are always welcome. For major changes, please open an issue first to discuss what you would like to change.</p>
-<h2 id="architecture">Architecture</h2>
-<p><img src="https://d1zrwss8zuawdm.cloudfront.net/webcard21-architecture1.png" alt="Image"></p>
-<p>This architecture shows how to implement game servers for Global Service.</p>
 <ul>
 <li>
-<p>Amazon CloudFront <br>
-: This helps minimizing end-users accessing latency for your web-based matchmaker.
-It caches matchmaking web-pages and accelerates dynamic API for optimized web-based matchmaking.</p>
+<p>Access to the CloudFront domain with JWT. You can make proper token from <a href="https://jwt.io/">JWT.IO</a>
+Default Secret Key is &ldquo;LzdWGpAToQ1DqYuzHxE6YOqi7G3X2yvNBot9mCXfx5k&rdquo;. You can create your own token from it. If you use your own secret key, you should fix the code inside of CloudFront Function. (If you are preparing production workload, please consider how to manage Secret Key securely)     <br>
+(ex) xxx.cloudfront.net?jwt=To.Ke.n</p>
 </li>
 <li>
-<p>Amazon CloudFront Function  <br>
-: In front of Amazon CloudFront, CloudFront Function(CFF) validates end-user&rsquo;s Token before it hits the matchmaker behind. As CFF works at the edge side of Amazon Global Infrastructure, it prevents unverified requests hit matchmaker instances.</p>
+<p>When you access to the matchmaker, Click the &ldquo;New Game!&rdquo; Button.</p>
 </li>
 <li>
-<p>AWS Global Accelerator Custom Routing   <br>
-: AWS Global Accelerator accelerates user traffics to Game Servers on AWS Cloud. It provides Anycast Static IP address pairs for end-users and helps their traffic routing to game servers fastly and consistently. Custom Routing is one of Global Accelerator&rsquo;s features makes deterministic routing for customers. Due to subnet mapping, it is easy to manage scalable game servers behind AWS Global Accelerator.</p>
+<p>Open another game client from the browser. Recommend to use another browser in private mode. Click the New Game Button</p>
 </li>
 <li>
-<p>AWS Systems Manager    <br>
-: AWS Systems Manager is used for providing target subnet id to Matchmaker. Sample code uses Systems Manager - Parameter Stores, but it is also able to use Database to manage connection information.</p>
+<p>After matching is completed, the game will soon be started on the Game Server through AWS Global Accelerator.</p>
 </li>
 </ul>
-<h2 id="how-to-use">How to Use</h2>
-<p>Step-by-Step guidance is provided. For the additional support, please feel free to contact through the Repository or email(<a href="mailto:jinspark@amazon.com">jinspark@amazon.com</a>). :)</p>
+<p><img src="https://d1zrwss8zuawdm.cloudfront.net/webcard21-play.png" alt="GamePlay"></p>
+<ul>
+<li>Have fun!</li>
+</ul>
+<p>If you have any queries &amp; issues, please feel free to contact me through this repository or email(<a href="mailto:jinspark@amazon.com">jinspark@amazon.com</a>). :)</p>
+<hr>
 <!-- raw HTML omitted -->
+
+
+
+
+
+<footer class=" footline" >
 	
-  
+</footer>
+
         
             </div> 
         
@@ -439,6 +460,7 @@ It caches matchmaking web-pages and accelerates dynamic API for optimized web-ba
             
                 
                     
+                    
                 
                 
 
@@ -458,6 +480,8 @@ It caches matchmaking web-pages and accelerates dynamic API for optimized web-ba
 
 	 
 	 
+		
+			<a class="nav nav-prev" href="/aws-web-card/en/globalaccelerator/" title="Global Accelerator Custom Routing"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/aws-web-card/en/matchmaker/" title="Web-based Matchmaker" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -489,4 +513,3 @@ It caches matchmaking web-pages and accelerates dynamic API for optimized web-ba
     
   </body>
 </html>
-

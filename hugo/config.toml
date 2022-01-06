@@ -27,7 +27,6 @@ home = [ "HTML", "RSS", "JSON"]
   # baseURL 변경
   baseURL = "/aws-web-card/ko/"
   languageCode = "ko-KR"
-  # googleAnalytics = "UA-169409427-1"
   defaultContentLanguage = "ko"
   defaultContentLanguageInSubdir = true
 
@@ -39,7 +38,6 @@ home = [ "HTML", "RSS", "JSON"]
   # baseURL 변경
   baseURL = "/aws-web-card/en/"
   languageCode = "en-US"
-  # googleAnalytics = "UA-169409427-1"
   defaultContentLanguage = "en"
   defaultContentLanguageInSubdir = true
 
