@@ -1,0 +1,45 @@
+
+# title 변경
+title = "AWS Edge workshop for Global Game"
+theme = "hugo-theme-learn"
+themesdir = "."
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
+#ignoreFiles = [ "\\.*lab3\\.*" ]
+
+# description, author 변경
+[params]
+  description = "AWS Edge service for Global Game Workshop"
+  author = "Jinsung Thomas Park"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+  themeVariant = "aws"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[Languages]
+  [Languages.ko]
+  title = "AWS Edge Service 를 이용해 글로벌 게임 만들기"
+  weight = 1
+  languageName = "한국어"
+  # baseURL 변경
+  baseURL = "/aws-web-card/ko/"
+  languageCode = "ko-KR"
+  # googleAnalytics = "UA-169409427-1"
+  defaultContentLanguage = "ko"
+  defaultContentLanguageInSubdir = true
+
+
+  [Languages.en]
+  title = "Making global games using AWS Edge services"
+  weight = 1
+  languageName = "English"
+  # baseURL 변경
+  baseURL = "/aws-web-card/en/"
+  languageCode = "en-US"
+  # googleAnalytics = "UA-169409427-1"
+  defaultContentLanguage = "en"
+  defaultContentLanguageInSubdir = true
+

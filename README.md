@@ -1,4 +1,4 @@
-# Building WebCard game based on AWS
+# Building Global WebCard game based using AWS Edge services
 
 WebCard21 is an Web-based 1:1 BlackJack game. Have Fun!
 
