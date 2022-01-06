@@ -39,7 +39,7 @@ Pull Request 요청은 언제든지 환영합니다! 대규모 변경이 필요�
 
 1. 컨텐츠는 Repository 를 클론(Clone)하시거나 소스코드를 다운로드하셔서 사용하실 수 있습니다.
 
-2. 워크샵을 통해 Step-by-Step Guidance 를 받으실 수도 있습니다. [English](https://jinspark-lab.github.io/aws-web-card/) / [Korean](https://jinspark-lab.github.io/aws-web-card/ko/)
+2. 워크샵을 통해 Step-by-Step Guidance 를 받으실 수도 있습니다. [English](https://jinspark-lab.github.io/aws-edge-sample/en) / [Korean](https://jinspark-lab.github.io/aws-edge-sample/ko/)
 
 - 게임을 즐겨보세요!
 
