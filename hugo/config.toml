@@ -25,7 +25,7 @@ home = [ "HTML", "RSS", "JSON"]
   weight = 1
   languageName = "한국어"
   # baseURL 변경
-  baseURL = "/aws-web-card/ko/"
+  baseURL = "/aws-edge-sample/ko/"
   languageCode = "ko-KR"
   defaultContentLanguage = "ko"
   defaultContentLanguageInSubdir = true
@@ -36,7 +36,7 @@ home = [ "HTML", "RSS", "JSON"]
   weight = 1
   languageName = "English"
   # baseURL 변경
-  baseURL = "/aws-web-card/en/"
+  baseURL = "/aws-edge-sample/en/"
   languageCode = "en-US"
   defaultContentLanguage = "en"
   defaultContentLanguageInSubdir = true

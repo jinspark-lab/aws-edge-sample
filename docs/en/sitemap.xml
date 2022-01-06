@@ -3,115 +3,115 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/aws-web-card/en/</loc>
+    <loc>/aws-edge-sample/en/</loc>
     <lastmod>2022-01-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/aws-web-card/ko/"
+                href="/aws-edge-sample/ko/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/aws-web-card/en/"
+                href="/aws-edge-sample/en/"
                 />
   </url>
   
   <url>
-    <loc>/aws-web-card/en/matchmaker/</loc>
+    <loc>/aws-edge-sample/en/matchmaker/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/aws-web-card/ko/matchmaker/"
+                href="/aws-edge-sample/ko/matchmaker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/aws-web-card/en/matchmaker/"
+                href="/aws-edge-sample/en/matchmaker/"
                 />
   </url>
   
   <url>
-    <loc>/aws-web-card/en/cloudfront/</loc>
+    <loc>/aws-edge-sample/en/cloudfront/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/aws-web-card/ko/cloudfront/"
+                href="/aws-edge-sample/ko/cloudfront/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/aws-web-card/en/cloudfront/"
+                href="/aws-edge-sample/en/cloudfront/"
                 />
   </url>
   
   <url>
-    <loc>/aws-web-card/en/gameserver/</loc>
+    <loc>/aws-edge-sample/en/gameserver/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/aws-web-card/ko/gameserver/"
+                href="/aws-edge-sample/ko/gameserver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/aws-web-card/en/gameserver/"
+                href="/aws-edge-sample/en/gameserver/"
                 />
   </url>
   
   <url>
-    <loc>/aws-web-card/en/globalaccelerator/</loc>
+    <loc>/aws-edge-sample/en/globalaccelerator/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/aws-web-card/ko/globalaccelerator/"
+                href="/aws-edge-sample/ko/globalaccelerator/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/aws-web-card/en/globalaccelerator/"
+                href="/aws-edge-sample/en/globalaccelerator/"
                 />
   </url>
   
   <url>
-    <loc>/aws-web-card/en/gameplay/</loc>
+    <loc>/aws-edge-sample/en/gameplay/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/aws-web-card/ko/gameplay/"
+                href="/aws-edge-sample/ko/gameplay/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/aws-web-card/en/gameplay/"
+                href="/aws-edge-sample/en/gameplay/"
                 />
   </url>
   
   <url>
-    <loc>/aws-web-card/en/categories/</loc>
+    <loc>/aws-edge-sample/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/aws-web-card/ko/categories/"
+                href="/aws-edge-sample/ko/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/aws-web-card/en/categories/"
+                href="/aws-edge-sample/en/categories/"
                 />
   </url>
   
   <url>
-    <loc>/aws-web-card/en/tags/</loc>
+    <loc>/aws-edge-sample/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="/aws-web-card/ko/tags/"
+                href="/aws-edge-sample/ko/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/aws-web-card/en/tags/"
+                href="/aws-edge-sample/en/tags/"
                 />
   </url>
   

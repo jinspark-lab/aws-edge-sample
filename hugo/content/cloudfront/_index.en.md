@@ -8,19 +8,13 @@ chapter: true
 
 # Create CloudFront Distributions
 
----
-
 - Move to CloudFront Console. Create CloudFront Distribution.
 
 - Designate Web Matchmaker as an Origin
 
 - (Important) It is essential to allow "GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE" method on CloudFront.
 
----
-
 # Create CloudFront Functions for JWT validation
-
----
 
 - From the CloudFront page, Click Functions tab on the left side.
 

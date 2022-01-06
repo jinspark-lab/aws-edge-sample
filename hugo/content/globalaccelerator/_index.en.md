@@ -8,8 +8,6 @@ chapter: true
 
 # Create AWS Global Accelerator Custom Routing accelerator
 
----
-
 - Move to Global Accelerator console.
 
 - Create Custom Routing accelerator. 

@@ -8,8 +8,6 @@ chapter: true
 
 # AWS Global Accelerator Custom Routing Accelerator 생성
 
----
-
 - Global Accelerator 콘솔로 이동합니다.
 
 - Custom Routing accelerator 를 생성합니다.

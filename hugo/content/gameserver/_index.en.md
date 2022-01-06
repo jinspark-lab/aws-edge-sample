@@ -8,8 +8,6 @@ chapter: true
 
 # Build Game Server on AWS
 
----
-
 - Move to VPC Console. Create Private Subnet from your VPC.
 
 - Move to EC2 Console. Click Launch Instances button.

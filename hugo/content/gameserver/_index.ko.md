@@ -8,8 +8,6 @@ chapter: true
 
 # 게임 서버 구축하기
 
----
-
 - VPC 콘솔로 이동합니다. VPC 내에 Private Subnet 을 생성합니다.
 
 - EC2 콘솔로 이동합니다. Launch Instance 버튼을 클릭합니다.

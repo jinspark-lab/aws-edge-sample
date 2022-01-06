@@ -8,8 +8,6 @@ chapter: true
 
 # Create Web-based Matchmaker
 
----
-
 - Move to EC2 Console. Click Launch Instances button.
 
 - Select Amazon Linux2 AMI.

@@ -8,8 +8,6 @@ chapter: true
 
 # Game Play
 
----
-
 - Access to the CloudFront domain with JWT. You can make proper token from [JWT.IO](https://jwt.io/)
 Default Secret Key is "LzdWGpAToQ1DqYuzHxE6YOqi7G3X2yvNBot9mCXfx5k". You can create your own token from it. If you use your own secret key, you should fix the code inside of CloudFront Function. (If you are preparing production workload, please consider how to manage Secret Key securely)        
 (ex) xxx.cloudfront.net?jwt=To.Ke.n
