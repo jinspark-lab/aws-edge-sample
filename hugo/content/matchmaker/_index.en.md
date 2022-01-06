@@ -3,10 +3,10 @@ title = "Web-based Matchmaker"
 url = "/matchmaker"
 pre = "<b>1. </b>"
 weight = 20
-chapter = true
+chapter = false
 +++
 
-# Create Web-based Matchmaker
+## Create Web-based Matchmaker
 
 - Move to EC2 Console. Click Launch Instances button.
 

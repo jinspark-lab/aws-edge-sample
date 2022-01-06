@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Edge Service HoL on AWS Edge Service 를 이용해 글로벌 게임 만들기</title>
+    <link>/aws-edge-sample/ko/</link>
+    <description>Recent content in Edge Service HoL on AWS Edge Service 를 이용해 글로벌 게임 만들기</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Thu, 06 Jan 2022 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="/aws-edge-sample/ko/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

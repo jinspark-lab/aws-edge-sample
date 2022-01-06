@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game Server 구축하기 on AWS Edge Service 를 이용해 글로벌 게임 만들기</title>
+    <link>/aws-edge-sample/ko/gameserver/</link>
+    <description>Recent content in Game Server 구축하기 on AWS Edge Service 를 이용해 글로벌 게임 만들기</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    
+	<atom:link href="/aws-edge-sample/ko/gameserver/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

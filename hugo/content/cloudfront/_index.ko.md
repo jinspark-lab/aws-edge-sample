@@ -3,10 +3,10 @@ title= "CloudFront 연동하기"
 url= "/cloudfront"
 pre= "<b>2. </b>"
 weight= 30
-chapter= true
+chapter= false
 +++
 
-# CloudFront Distributions 생성하기
+## CloudFront Distributions 생성하기
 
 - CloudFront 콘솔로 이동합니다. 새로운 CloudFront Distribution 을 생성합니다.
 
@@ -14,8 +14,7 @@ chapter= true
 
 - (중요) CloudFront 에서 "GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE" 방식을 전부 허용합니다.
 
-# JWT Validation 을 위한 CloudFront Function 을 생성하기
-
+## JWT Validation 을 위한 CloudFront Function 을 생성하기
 
 - CloudFront 페이지에서 왼쪽 메뉴의 Functions 탭을 클릭합니다.
 

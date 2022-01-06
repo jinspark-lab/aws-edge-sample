@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/aws-edge-sample/ko/</loc>
+    <lastmod>2022-01-06T00:00:00+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-edge-sample/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-edge-sample/ko/"
+                />
+  </url>
+  
+  <url>
+    <loc>/aws-edge-sample/ko/matchmaker/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-edge-sample/en/matchmaker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-edge-sample/ko/matchmaker/"
+                />
+  </url>
+  
+  <url>
+    <loc>/aws-edge-sample/ko/cloudfront/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-edge-sample/en/cloudfront/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-edge-sample/ko/cloudfront/"
+                />
+  </url>
+  
+  <url>
+    <loc>/aws-edge-sample/ko/gameserver/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-edge-sample/en/gameserver/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-edge-sample/ko/gameserver/"
+                />
+  </url>
+  
+  <url>
+    <loc>/aws-edge-sample/ko/globalaccelerator/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-edge-sample/en/globalaccelerator/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-edge-sample/ko/globalaccelerator/"
+                />
+  </url>
+  
+  <url>
+    <loc>/aws-edge-sample/ko/gameplay/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-edge-sample/en/gameplay/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-edge-sample/ko/gameplay/"
+                />
+  </url>
+  
+  <url>
+    <loc>/aws-edge-sample/ko/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-edge-sample/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-edge-sample/ko/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>/aws-edge-sample/ko/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-edge-sample/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-edge-sample/ko/tags/"
+                />
+  </url>
+  
+</urlset>

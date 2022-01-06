@@ -2,12 +2,10 @@
 date = 2022-01-06
 title = "Edge Service HoL"
 weight = 10
-chapter = true
+chapter = false
 +++
 
 # Building Global WebCard game based on AWS
-
----
 
 WebCard is an Web-based 1:1 BlackJack game. 
 You are able to launch this game globally, and play card games with global players.
@@ -18,12 +16,12 @@ Not only source codes for the web-based game, but it also includes AWS best prac
 This sample includes how to use AWS Edge services for routing web-based persistent games.
 Using Edge services helps you to minimize end-user latency for your game service.
 
-It includes as follows:
+It includes as follows:       
 
-- Amazon CloudFront
-- Amazon CloudFront Function
-- AWS Global Accelerator Custom Routing
-- AWS Systems Manager
+#### [Amazon CloudFront](https://aws.amazon.com/cloudfront)
+#### [Amazon CloudFront Function](https://aws.amazon.com/blogs/aws/introducing-cloudfront-functions-run-your-code-at-the-edge-with-low-latency-at-any-scale/)
+#### [AWS Global Accelerator Custom Routing](https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-aws-global-accelerator-custom-routing-accelerators/)
+#### [AWS Systems Manager](https://aws.amazon.com/systems-manager)
 
 Pull requests are always welcome. For major changes, please open an issue first to discuss what you would like to change.
 
@@ -31,7 +29,8 @@ Pull requests are always welcome. For major changes, please open an issue first 
 
 ![Image](https://d1zrwss8zuawdm.cloudfront.net/webcard21-architecture1.png)
 
-This architecture shows how to implement game servers for Global Service.
+
+This architecture shows how to implement game servers for Global Service.        
 
 - Amazon CloudFront    
  : This helps minimizing end-users accessing latency for your web-based matchmaker.

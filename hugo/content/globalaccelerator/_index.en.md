@@ -3,10 +3,10 @@ title= "Global Accelerator Custom Routing"
 url= "/globalaccelerator"
 pre= "<b>4. </b>"
 weight= 60
-chapter= true
+chapter= false
 +++
 
-# Create AWS Global Accelerator Custom Routing accelerator
+## Create AWS Global Accelerator Custom Routing accelerator
 
 - Move to Global Accelerator console.
 

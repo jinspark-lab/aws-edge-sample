@@ -3,10 +3,10 @@ title= "Create CloudFront Distributions"
 url= "/cloudfront"
 pre= "<b>2. </b>"
 weight= 30
-chapter= true
+chapter= false
 +++
 
-# Create CloudFront Distributions
+## Create CloudFront Distributions
 
 - Move to CloudFront Console. Create CloudFront Distribution.
 
@@ -14,7 +14,7 @@ chapter= true
 
 - (Important) It is essential to allow "GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE" method on CloudFront.
 
-# Create CloudFront Functions for JWT validation
+## Create CloudFront Functions for JWT validation
 
 - From the CloudFront page, Click Functions tab on the left side.
 

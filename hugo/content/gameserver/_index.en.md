@@ -3,10 +3,10 @@ title= "Build Game Server"
 url= "/gameserver"
 pre= "<b>3. </b>"
 weight= 40
-chapter= true
+chapter= false
 +++
 
-# Build Game Server on AWS
+## Build Game Server on AWS
 
 - Move to VPC Console. Create Private Subnet from your VPC.
 

@@ -3,10 +3,10 @@ title = "웹 기반 매치메이커"
 url = "/matchmaker"
 pre = "<b>1. </b>"
 weight = 20
-chapter = true
+chapter = false
 +++
 
-# Web 기반의 Matchmaker 만들기
+## Web 기반의 Matchmaker 만들기
 
 - EC2 콘솔로 이동합니다. Launch Instance 버튼을 클릭합니다.
 

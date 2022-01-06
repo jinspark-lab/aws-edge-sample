@@ -3,10 +3,10 @@ title= "게임 실행하기"
 url= "/gameplay"
 pre= "<b>5. </b>"
 weight= 70
-chapter= true
+chapter= false
 +++
 
-# 게임 플레이
+## 게임 플레이
 
 - 앞에서 만든 CloudFront 도메인에 JWT 를 request parameter 로 보냅니다. 유효한 JWT 토큰은 [다음 링크](https://jwt.io/) 에서 쉽게 생성할 수 있습니다.      
 기본 Secret Key 는 "LzdWGpAToQ1DqYuzHxE6YOqi7G3X2yvNBot9mCXfx5k" 입니다. 토큰을 새로 만들어서 CloudFront Function 에 반영해서 JWT Validation 을 구축하실 수 있습니다. (만약 프로덕션 워크로드를 구상하고 계신다면 Secret Key 를 안전하게 관리할 방법을 고려해야 합니다)         

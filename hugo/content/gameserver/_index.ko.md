@@ -3,10 +3,10 @@ title= "Game Server 구축하기"
 url= "/gameserver"
 pre= "<b>3. </b>"
 weight= 40
-chapter= true
+chapter= false
 +++
 
-# 게임 서버 구축하기
+## 게임 서버 구축하기
 
 - VPC 콘솔로 이동합니다. VPC 내에 Private Subnet 을 생성합니다.
 
