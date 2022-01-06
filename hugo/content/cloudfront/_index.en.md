@@ -8,6 +8,8 @@ chapter= false
 
 ## Create CloudFront Distributions
 
+![CloudFront](https://d1zrwss8zuawdm.cloudfront.net/webcard21-cf.png)
+
 - Move to CloudFront Console. Create CloudFront Distribution.
 
 - Designate Web Matchmaker as an Origin

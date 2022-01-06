@@ -8,6 +8,8 @@ chapter= false
 
 ## CloudFront Distributions 생성하기
 
+![CloudFront](https://d1zrwss8zuawdm.cloudfront.net/webcard21-cf.png)
+
 - CloudFront 콘솔로 이동합니다. 새로운 CloudFront Distribution 을 생성합니다.
 
 - 위에서 생성한 Web Matchmaker 를 Origin 으로 지정합니다.
