@@ -1,10 +1,10 @@
----
-title: CloudFront 연동하기
-url: /cloudfront
-pre: "<b>2. </b>"
-weight: 30
-chapter: true
----
++++
+title= "CloudFront 연동하기"
+url= "/cloudfront"
+pre= "<b>2. </b>"
+weight= 30
+chapter= true
++++
 
 # CloudFront Distributions 생성하기
 

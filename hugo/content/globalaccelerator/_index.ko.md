@@ -1,10 +1,10 @@
----
-title: Global Accelerator 구성하기
-url: /globalaccelerator
-pre: "<b>4. </b>"
-weight: 60
-chapter: true
----
++++
+title = "Global Accelerator 구성하기"
+url= "/globalaccelerator"
+pre= "<b>4. </b>"
+weight= 60
+chapter= true
++++
 
 # AWS Global Accelerator Custom Routing Accelerator 생성
 

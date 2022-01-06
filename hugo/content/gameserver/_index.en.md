@@ -1,10 +1,10 @@
----
-title: Build Game Server
-url: /gameserver
-pre: "<b>3. </b>"
-weight: 40
-chapter: true
----
++++
+title= "Build Game Server"
+url= "/gameserver"
+pre= "<b>3. </b>"
+weight= 40
+chapter= true
++++
 
 # Build Game Server on AWS
 

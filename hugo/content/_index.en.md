@@ -1,9 +1,9 @@
----
-date: 2022-01-06
-title: Edge Service HoL
-weight: 10
-chapter: true
----
++++
+date = 2022-01-06
+title = "Edge Service HoL"
+weight = 10
+chapter = true
++++
 
 # Building Global WebCard game based on AWS
 

@@ -1,10 +1,10 @@
----
-title: 게임 실행하기
-url: /gameplay
-pre: "<b>5. </b>"
-weight: 70
-chapter: true
----
++++
+title= "게임 실행하기"
+url= "/gameplay"
+pre= "<b>5. </b>"
+weight= 70
+chapter= true
++++
 
 # 게임 플레이
 

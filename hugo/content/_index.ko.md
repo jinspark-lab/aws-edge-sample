@@ -1,9 +1,9 @@
----
-date: 2022-01-06
-title: Edge Service HoL
-weight: 10
-chapter: true
----
++++
+date = 2022-01-06
+title = "Edge Service HoL"
+weight = 10
+chapter = true
++++
 
 # AWS Edge Service 를 이용해서 글로벌 웹게임 만들기
 

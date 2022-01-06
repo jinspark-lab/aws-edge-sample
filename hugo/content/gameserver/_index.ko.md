@@ -1,10 +1,10 @@
----
-title: Game Server 구축하기
-url: /gameserver
-pre: "<b>3. </b>"
-weight: 40
-chapter: true
----
++++
+title= "Game Server 구축하기"
+url= "/gameserver"
+pre= "<b>3. </b>"
+weight= 40
+chapter= true
++++
 
 # 게임 서버 구축하기
 

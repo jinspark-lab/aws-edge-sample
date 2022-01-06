@@ -1,10 +1,10 @@
----
-title: Create CloudFront Distributions
-url: /cloudfront
-pre: "<b>2. </b>"
-weight: 30
-chapter: true
----
++++
+title= "Create CloudFront Distributions"
+url= "/cloudfront"
+pre= "<b>2. </b>"
+weight= 30
+chapter= true
++++
 
 # Create CloudFront Distributions
 

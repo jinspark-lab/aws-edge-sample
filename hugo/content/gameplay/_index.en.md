@@ -1,10 +1,10 @@
----
-title: Play the Game
-url: /gameplay
-pre: "<b>5. </b>"
-weight: 70
-chapter: true
----
++++
+title= "Play the Game"
+url= "/gameplay"
+pre= "<b>5. </b>"
+weight= 70
+chapter= true
++++
 
 # Game Play
 
