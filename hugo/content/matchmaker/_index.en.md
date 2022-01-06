@@ -47,7 +47,6 @@ sudo pm2 save
 
 You can also follow this script from cloudinit.sh in source codes.   
 
----
 
 <p align="center">
 © 2022 Amazon Web Services, Inc. 또는 자회사, All rights reserved.

@@ -135,8 +135,6 @@ function handler(event) {
 
 - 연동된 CloudFront Distributions 에 함수를 Publish 해야합니다.
 
----
-
 <p align="center">
 © 2022 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
 </p>

@@ -20,8 +20,6 @@ chapter: true
 
 - 게임 서버의 Security Group 정책을 설정합니다. Private Subnet 에 위치한 게임 서버에 접근을 허용하려면 Global Accelerator 의 [IP Address Range](https://docs.aws.amazon.com/global-accelerator/latest/dg/introduction-ip-ranges.html) 를 허용해야 합니다. 하지만 샘플 코드를 위해서는 Public 으로 열어두셔도 무방합니다.
 
----
-
 <p align="center">
 © 2022 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
 </p>

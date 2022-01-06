@@ -134,8 +134,6 @@ You can also copy & paste the code from cf2.js.
 
 - Also you should Publish the function to the associated CloudFront Distributions.
 
----
-
 <p align="center">
 © 2022 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
 </p>

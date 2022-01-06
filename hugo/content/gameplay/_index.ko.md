@@ -23,8 +23,6 @@ chapter: true
 - 게임을 즐겨보세요!
 
 추가적인 문의 사항이나 이슈가 있는 경우 리포지토리 또는 jinspark@amazon.com 으로 연락 부탁드립니다. :) 
- 
----
 
 <p align="center">
 © 2022 Amazon Web Services, Inc. 또는 자회사, All rights reserved.

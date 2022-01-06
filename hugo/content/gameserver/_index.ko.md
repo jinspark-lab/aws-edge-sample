@@ -57,8 +57,6 @@ Name : webcardSubnetId (Important).
 Type : String     
 Value : <Subnet ID of Game server's subnet>       
 
----
-
 <p align="center">
 © 2022 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
 </p>

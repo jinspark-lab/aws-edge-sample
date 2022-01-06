@@ -24,8 +24,6 @@ Default Secret Key is "LzdWGpAToQ1DqYuzHxE6YOqi7G3X2yvNBot9mCXfx5k". You can cre
 
 If you have any queries & issues, please feel free to contact me through this repository or email(jinspark@amazon.com). :) 
 
----
-
 <p align="center">
 © 2022 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
 </p>

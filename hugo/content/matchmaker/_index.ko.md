@@ -47,8 +47,6 @@ sudo pm2 save
 
 위의 스크립트는 소스 코드 내에 cloudinit.sh 에서도 참고하실 수 있습니다.
 
----
-
 <p align="center">
 © 2022 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
 </p>

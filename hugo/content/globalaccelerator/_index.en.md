@@ -20,8 +20,6 @@ chapter: true
 
 - Open Game server's security group policy. You should check Global Accelerator IP Range from [this Document](https://docs.aws.amazon.com/global-accelerator/latest/dg/introduction-ip-ranges.html). But you can open the subnet publicly for the sample.
 
----
-
 <p align="center">
 © 2022 Amazon Web Services, Inc. 또는 자회사, All rights reserved.
 </p>
