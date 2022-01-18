@@ -1,4 +1,4 @@
-# AWS Service 를 이용해서 글로벌 웹 카드게임 만들기
+# AWS Service 를 이용해서 글로벌 웹 서비스 만들기
 
 ![GamePlay](https://d1zrwss8zuawdm.cloudfront.net/webcard21-play.png)
 

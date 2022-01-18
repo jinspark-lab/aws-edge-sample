@@ -1,4 +1,4 @@
-# Building Global WebCard game based using AWS Edge services
+# Building Global Web Application based using AWS Edge services
 
 ![GamePlay](https://d1zrwss8zuawdm.cloudfront.net/webcard21-play.png)
 
