@@ -22,6 +22,7 @@ It includes as follows:
 #### [Amazon CloudFront Function](https://aws.amazon.com/blogs/aws/introducing-cloudfront-functions-run-your-code-at-the-edge-with-low-latency-at-any-scale/)
 #### [AWS Global Accelerator Custom Routing](https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-aws-global-accelerator-custom-routing-accelerators/)
 #### [AWS Systems Manager](https://aws.amazon.com/systems-manager)
+#### [Amazon CloudWatch RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM.html)
 
 Pull requests are always welcome. For major changes, please open an issue first to discuss what you would like to change.
 

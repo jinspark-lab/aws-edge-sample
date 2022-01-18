@@ -20,6 +20,7 @@ WebCard 은 21에 가까운 플레이어가 이기는 웹 기반의 1:1 블랙�
 #### [Amazon CloudFront Function](https://aws.amazon.com/blogs/aws/introducing-cloudfront-functions-run-your-code-at-the-edge-with-low-latency-at-any-scale/)
 #### [AWS Global Accelerator Custom Routing](https://aws.amazon.com/blogs/networking-and-content-delivery/introducing-aws-global-accelerator-custom-routing-accelerators/)
 #### [AWS Systems Manager](https://aws.amazon.com/systems-manager)
+#### [Amazon CloudWatch RUM](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM.html)
 
 Pull Request 요청은 언제든지 환영합니다! 대규모 변경이 필요한 경우 Issue 를 먼저 열어주십시오.
 
