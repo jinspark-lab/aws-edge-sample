@@ -12,20 +12,20 @@
     <title>Edge Service HoL :: Making global games using AWS Edge services</title>
 
     
-    <link href="/aws-edge-sample/en/css/nucleus.css?1641463933" rel="stylesheet">
-    <link href="/aws-edge-sample/en/css/fontawesome-all.min.css?1641463933" rel="stylesheet">
-    <link href="/aws-edge-sample/en/css/hybrid.css?1641463933" rel="stylesheet">
-    <link href="/aws-edge-sample/en/css/featherlight.min.css?1641463933" rel="stylesheet">
-    <link href="/aws-edge-sample/en/css/perfect-scrollbar.min.css?1641463933" rel="stylesheet">
-    <link href="/aws-edge-sample/en/css/auto-complete.css?1641463933" rel="stylesheet">
-    <link href="/aws-edge-sample/en/css/atom-one-dark-reasonable.css?1641463933" rel="stylesheet">
-    <link href="/aws-edge-sample/en/css/theme.css?1641463933" rel="stylesheet">
-    <link href="/aws-edge-sample/en/css/hugo-theme.css?1641463933" rel="stylesheet">
+    <link href="/aws-edge-sample/en/css/nucleus.css?1642475284" rel="stylesheet">
+    <link href="/aws-edge-sample/en/css/fontawesome-all.min.css?1642475284" rel="stylesheet">
+    <link href="/aws-edge-sample/en/css/hybrid.css?1642475284" rel="stylesheet">
+    <link href="/aws-edge-sample/en/css/featherlight.min.css?1642475284" rel="stylesheet">
+    <link href="/aws-edge-sample/en/css/perfect-scrollbar.min.css?1642475284" rel="stylesheet">
+    <link href="/aws-edge-sample/en/css/auto-complete.css?1642475284" rel="stylesheet">
+    <link href="/aws-edge-sample/en/css/atom-one-dark-reasonable.css?1642475284" rel="stylesheet">
+    <link href="/aws-edge-sample/en/css/theme.css?1642475284" rel="stylesheet">
+    <link href="/aws-edge-sample/en/css/hugo-theme.css?1642475284" rel="stylesheet">
     
-      <link href="/aws-edge-sample/en/css/theme-aws.css?1641463933" rel="stylesheet">
+      <link href="/aws-edge-sample/en/css/theme-aws.css?1642475284" rel="stylesheet">
     
 
-    <script src="/aws-edge-sample/en/js/jquery-3.3.1.min.js?1641463933"></script>
+    <script src="/aws-edge-sample/en/js/jquery-3.3.1.min.js?1642475284"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -45,7 +45,7 @@
       <a id="logo" href="/aws-edge-sample/ko">
 	<img src="/aws-edge-sample/ko/images/logo.png" height="70px"/>
 </a>
-
+<script>(function(n,i,v,r,s,c,x,z){x=window.AwsRumClient={q:[],n:n,i:i,v:v,r:r,c:c};window[n]=function(c,p){x.q.push({c:c,p:p});};z=document.createElement('script');z.async=true;z.src=s;document.head.insertBefore(z,document.getElementsByTagName('script')[0]);})('cwr','6da31d0d-1ca0-4ee3-ad7e-54b39ad679b3','1.0.0','us-east-1','https://client.rum.us-east-1.amazonaws.com/1.0.2/cwr.js',{sessionSampleRate:1,guestRoleArn:"arn:aws:iam::486403792456:role/RUM-Monitor-us-east-1-486403792456-6056449351461-Unauth",identityPoolId:"us-east-1:81cbee8c-4f5a-4dd9-b954-b58e4b75237b",endpoint:"https://dataplane.rum.us-east-1.amazonaws.com",telemetries:["performance","errors","http"],allowCookies:true,enableXRay:false});</script>
     </div>
     
         <div class="searchbox">
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/aws-edge-sample/en/js/lunr.min.js?1641463933"></script>
-<script type="text/javascript" src="/aws-edge-sample/en/js/auto-complete.js?1641463933"></script>
+<script type="text/javascript" src="/aws-edge-sample/en/js/lunr.min.js?1642475284"></script>
+<script type="text/javascript" src="/aws-edge-sample/en/js/auto-complete.js?1642475284"></script>
 <script type="text/javascript">
     
         var baseurl = "\/aws-edge-sample\/en\/\/en";
     
 </script>
-<script type="text/javascript" src="/aws-edge-sample/en/js/search.js?1641463933"></script>
+<script type="text/javascript" src="/aws-edge-sample/en/js/search.js?1642475284"></script>
 
     
   </div>
@@ -191,6 +191,30 @@
  
 
           
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-edge-sample/en/monitor/" title="Monitoring Service" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-edge-sample/en/monitor/">
+          <b>6. </b>Monitoring Service
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
          
     </ul>
 
@@ -298,7 +322,7 @@ Using Edge services helps you to minimize end-user latency for your game service
 <h4 id="aws-systems-managerhttpsawsamazoncomsystems-manager"><a href="https://aws.amazon.com/systems-manager">AWS Systems Manager</a></h4>
 <p>Pull requests are always welcome. For major changes, please open an issue first to discuss what you would like to change.</p>
 <h2 id="architecture">Architecture</h2>
-<p><img src="https://d1zrwss8zuawdm.cloudfront.net/webcard21-architecture1.png" alt="Image"></p>
+<p><img src="https://d1zrwss8zuawdm.cloudfront.net/webcard21-architecture2.png" alt="Image"></p>
 <p>This architecture shows how to implement game servers for Global Service.</p>
 <ul>
 <li>
@@ -317,6 +341,10 @@ It caches matchmaking web-pages and accelerates dynamic API for optimized web-ba
 <li>
 <p>AWS Systems Manager    <br>
 : AWS Systems Manager is used for providing target subnet id to Matchmaker. Sample code uses Systems Manager - Parameter Stores, but it is also able to use Database to manage connection information.</p>
+</li>
+<li>
+<p>Amazon CloudWatch RUM
+: Amazon CloudWatch RUM is used for measuring end-user experiences for the application. You are able to evaluate end-user performance &amp; errors &amp; session information inside AWS Console Dashboard. You are also integrating AWS X-Ray, Amazon Cognito and Amazon CloudWatch Logs to analyze.</p>
 </li>
 </ul>
 <h2 id="how-to-use">How to Use</h2>
@@ -433,6 +461,22 @@ It caches matchmaking web-pages and accelerates dynamic API for optimized web-ba
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
         
@@ -453,19 +497,19 @@ It caches matchmaking web-pages and accelerates dynamic API for optimized web-ba
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/aws-edge-sample/en/js/clipboard.min.js?1641463933"></script>
-    <script src="/aws-edge-sample/en/js/perfect-scrollbar.min.js?1641463933"></script>
-    <script src="/aws-edge-sample/en/js/perfect-scrollbar.jquery.min.js?1641463933"></script>
-    <script src="/aws-edge-sample/en/js/jquery.sticky.js?1641463933"></script>
-    <script src="/aws-edge-sample/en/js/featherlight.min.js?1641463933"></script>
-    <script src="/aws-edge-sample/en/js/highlight.pack.js?1641463933"></script>
+    <script src="/aws-edge-sample/en/js/clipboard.min.js?1642475284"></script>
+    <script src="/aws-edge-sample/en/js/perfect-scrollbar.min.js?1642475284"></script>
+    <script src="/aws-edge-sample/en/js/perfect-scrollbar.jquery.min.js?1642475284"></script>
+    <script src="/aws-edge-sample/en/js/jquery.sticky.js?1642475284"></script>
+    <script src="/aws-edge-sample/en/js/featherlight.min.js?1642475284"></script>
+    <script src="/aws-edge-sample/en/js/highlight.pack.js?1642475284"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/aws-edge-sample/en/js/modernizr.custom-3.6.0.js?1641463933"></script>
-    <script src="/aws-edge-sample/en/js/learn.js?1641463933"></script>
-    <script src="/aws-edge-sample/en/js/hugo-learn.js?1641463933"></script>
+    <script src="/aws-edge-sample/en/js/modernizr.custom-3.6.0.js?1642475284"></script>
+    <script src="/aws-edge-sample/en/js/learn.js?1642475284"></script>
+    <script src="/aws-edge-sample/en/js/hugo-learn.js?1642475284"></script>
 
-    <link href="/aws-edge-sample/en/mermaid/mermaid.css?1641463933" rel="stylesheet" />
-    <script src="/aws-edge-sample/en/mermaid/mermaid.js?1641463933"></script>
+    <link href="/aws-edge-sample/en/mermaid/mermaid.css?1642475284" rel="stylesheet" />
+    <script src="/aws-edge-sample/en/mermaid/mermaid.js?1642475284"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

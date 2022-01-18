@@ -19,7 +19,7 @@ Pull Request 요청은 언제든지 환영합니다! 대규모 변경이 필요�
 
 ## 시스템 아키텍처
 
-![Image](https://d1zrwss8zuawdm.cloudfront.net/webcard21-architecture1.png)
+![Image](https://d1zrwss8zuawdm.cloudfront.net/webcard21-architecture2.png)
 
 위의 아키텍처는 글로벌 서비스를 위해 게임 서버를 구현하는 방법을 제안합니다. 각 서비스는 다음과 같은 용도로 사용되어집니다.
 
@@ -34,6 +34,9 @@ Pull Request 요청은 언제든지 환영합니다! 대규모 변경이 필요�
 
 - AWS Systems Manager       
  : AWS Systems Manager 는 게임 서버가 포함된 대상 서브넷 ID 를 저장합니다. 예제 코드는 Systems Manager 의 Parameter Store 를 사용합니다. 실제 구현 시에는 별도의 Service Discovery 를 구현하거나 Database 에 연결 정보를 포함시킬 수 있습니다.
+
+- Amazon CloudWatch RUM
+ : Amazon CloudWatch RUM 은 실제 사용자의 Latency 및 사용자 경험을 측정하기 위한 방법입니다. 자바스크립트 스니펫을 삽입하는 것만으로 실제 엔드유저의 사용자 경험, 세션 정보 등 다양한 어플리케이션 정보를 쉽게 모니터링할 수 있습니다.
 
 ## 샘플 코드 사용 방법
 

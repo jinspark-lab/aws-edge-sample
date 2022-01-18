@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/aws-edge-sample/ko/images/favicon.png" type="image/png">
 
-    <title>Game Server 구축하기 :: AWS Edge Service 를 이용해 글로벌 게임 만들기</title>
+    <title>서비스 모니터링하기 :: AWS Edge Service 를 이용해 글로벌 게임 만들기</title>
 
     
     <link href="/aws-edge-sample/ko/css/nucleus.css?1642475284" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/aws-edge-sample/ko/gameserver/">
+  <body class="" data-url="/aws-edge-sample/ko/monitor/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -126,8 +126,8 @@
   
     
     <li data-nav-id="/aws-edge-sample/ko/gameserver/" title="Game Server 구축하기" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/aws-edge-sample/ko/gameserver/">
@@ -198,8 +198,8 @@
   
     
     <li data-nav-id="/aws-edge-sample/ko/monitor/" title="서비스 모니터링하기" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/aws-edge-sample/ko/monitor/">
@@ -239,7 +239,7 @@
                   
                     
                     
-                      <option id="en" value="/aws-edge-sample/en/gameserver/">English</option>
+                      <option id="en" value="/aws-edge-sample/en/monitor/">English</option>
                     
                   
               
@@ -253,7 +253,7 @@
                   
                     
                     
-                      <option id="ko" value="/aws-edge-sample/ko/gameserver/" selected>한국어</option>
+                      <option id="ko" value="/aws-edge-sample/ko/monitor/" selected>한국어</option>
                     
                   
               
@@ -316,7 +316,7 @@
             
           
           
-            <a href='/aws-edge-sample/ko/'>Edge Service HoL</a> > Game Server 구축하기
+            <a href='/aws-edge-sample/ko/'>Edge Service HoL</a> > 서비스 모니터링하기
           
          
           
@@ -329,7 +329,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#게임-서버-구축하기">게임 서버 구축하기</a></li>
+    <li><a href="#cloudwatch-rum-기반의-서비스-모니터링">CloudWatch RUM 기반의 서비스 모니터링</a></li>
   </ul>
 </nav>
     </div>
@@ -347,7 +347,7 @@
           
             <h1>
               
-              Game Server 구축하기
+              서비스 모니터링하기
             </h1>
           
 
@@ -356,63 +356,67 @@
 
 
 
-	<h2 id="게임-서버-구축하기">게임 서버 구축하기</h2>
+	<h2 id="cloudwatch-rum-기반의-서비스-모니터링">CloudWatch RUM 기반의 서비스 모니터링</h2>
 <ul>
 <li>
-<p>VPC 콘솔로 이동합니다. VPC 내에 Private Subnet 을 생성합니다.</p>
+<p>어플리케이션의 사용자 반응성을 체크하는 가장 좋은 방식은 Real User Monitoring 기법으로, 실제 사용자 레벨에서의 사용자 경험 및 Latency 를 체크하는 것입니다.</p>
 </li>
 <li>
-<p>EC2 콘솔로 이동합니다. Launch Instance 버튼을 클릭합니다.</p>
+<p>Amazon CloudWatch RUM 을 이용하면, 실제 사용자 트래픽을 대시보드를 통해 쉽게 모니터링할 수가 있습니다.</p>
 </li>
 <li>
-<p>Amazon Linux2 AMI 를 선택합니다.</p>
+<p>CloudWatch 콘솔로 이동합니다. (us-east-1)</p>
 </li>
 <li>
-<p>아무 인스턴스 타입을 선택하고 Next 버튼을 클릭합니다.</p>
+<p>좌측의 Application Monitoring 탭에서 RUM 을 클릭합니다.</p>
 </li>
 <li>
-<p>Private Subnet 에 EC2 인스턴스를 생성합니다. 이 Private Subnet 은 매치메이커의 서브넷과 다른 서브넷에 위치할 수 있습니다.</p>
+<p>Add App Monitor 버튼을 클릭해서 새로운 모니터링 어플리케이션을 시작합니다.</p>
 </li>
 <li>
-<p>인스턴스 세부 정보를 설정합니다. 다음 Shell Script 를 사용자 데이터(User Data)에 포함시킵니다.</p>
+<p>다음과 같이 App Monitor Name 과 Application Domain 을 입력합니다. 샘플에서는 매치메이커에서 사용자 트래픽 모니터링을 하기 위해 CloudWatch RUM 을 연동합니다.</p>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">
-<span style="color:#75715e">#! /bin/sh</span>
-
-echo <span style="color:#e6db74">&#34;Setting up NodeJS Environment&#34;</span>
-curl --silent --location https://rpm.nodesource.com/setup_17.x | bash -
-yum -y install nodejs
-
-<span style="color:#75715e"># Dot source the files to ensure that variables are available within the current shell</span>
-npm install pm2 -g --unsafe-perm<span style="color:#f92672">=</span>true --allow-root
-npm cache clean --force
-<span style="color:#75715e"># Install webcard game server</span>
-cd ~
-curl -O <span style="color:#e6db74">&#34;https://d1zrwss8zuawdm.cloudfront.net/web-card21.zip&#34;</span>
-unzip web-card21.zip
-cd ~/web-card21/webcard/
-chmod -R <span style="color:#ae81ff">755</span> ./node_modules
-npm install -g package --unsafe-perm<span style="color:#f92672">=</span>true --allow-root
-<span style="color:#75715e"># Run pm2</span>
-<span style="color:#75715e"># export BUILD_ID=dontKillMePlease</span>
-sudo pm2 start app.js -f
-sudo pm2 startup
-sudo pm2 save
-
-</code></pre></div><p>위의 스크립트는 cloudinit.sh 에서도 참고하실 수 있습니다.</p>
-<p>게임 서버가 생성되었으면, 게임 서버의 네트워크 정보를 관리할 수 있게 등록해줍니다. 이 과정은 Service Level 에서는 필요하지 않을 수 있습니다.</p>
+<p><img src="https://d1zrwss8zuawdm.cloudfront.net/webcard21-appmonitor.png" alt="RUM"></p>
 <ul>
 <li>
-<p>Systems Manager 콘솔로 이동합니다. Parameter Store 를 클릭합니다.</p>
+<p>Application Domain 에는 TLD (Top Level Domain) 를 입력해야 합니다. 도메인이 알맞게 입력되었는지 확인합니다.</p>
 </li>
 <li>
-<p>파라미터를 생성하고 다음과 같이 값을 입력합니다.:   <br>
-Name : webcardSubnetId (Important).   <br>
-Type : String  <br>
-Value : &lt;Subnet ID of Game server&rsquo;s subnet&gt;</p>
+<p>성능, Javascript 에러 등 모든 지표를 수집하도록 합니다.</p>
 </li>
 </ul>
+<p><img src="https://d1zrwss8zuawdm.cloudfront.net/webcard21-metric.png" alt="RUM"></p>
+<ul>
+<li>CloudWatch RUM 은 Amazon Cognito 서비스를 이용해서 사용자 세션을 관리합니다. 새로운 Identity Pool 을 생성하고 사용하게 합니다.</li>
+</ul>
+<p><img src="https://d1zrwss8zuawdm.cloudfront.net/webcard21-cognito.png" alt="RUM"></p>
+<ul>
+<li>
+<p>Add App Monitor 버튼을 클릭해서 어플리케이션을 생성합니다.</p>
+</li>
+<li>
+<p>Javascript 스니펫을 복사해서 코드에 붙여넣습니다. 다음과 같이 /webcardmatch/views/index.html 의 <!-- raw HTML omitted --> 태그 안에서 가장 상위 <!-- raw HTML omitted --><!-- raw HTML omitted --> 태그로 입력해줍니다.</p>
+</li>
+</ul>
+<p><img src="https://d1zrwss8zuawdm.cloudfront.net/webcard21-snippet.png" alt="RUM"></p>
+<ul>
+<li>
+<p>변경된 index.html 코드를 Matchmaker EC2 에 재배포합니다.</p>
+</li>
+<li>
+<p>다시 게임 매치를 시작합니다. 이제 CloudWatch RUM 에 당신의 게임을 플레이하기 위한 유저들의 세션 정보를 모니터링할 수 있습니다.</p>
+</li>
+</ul>
+<p><img src="https://d1zrwss8zuawdm.cloudfront.net/webcard21-rum1.png" alt="RUM"></p>
+<ul>
+<li>실제 유저가 체감할 수 있는 성능정보 뿐 아니라 엔드 유저 디바이스 정보 등 다양한 지표들을 확인할 수 있습니다.</li>
+</ul>
+<p><img src="https://d1zrwss8zuawdm.cloudfront.net/webcard21-rum2.png" alt="RUM"></p>
+<ul>
+<li>예제에서는 CloudWatch RUM 을 매치메이커에 두었지만, 어플리케이션 서버에 직접 둘 수도 있습니다. 다양하게 응용해서 어플리케이션 운영의 가시성을 높일 수 있습니다.</li>
+</ul>
+<p>추가적인 문의 사항이나 이슈가 있는 경우 리포지토리 또는 <a href="mailto:jinspark@amazon.com">jinspark@amazon.com</a> 으로 연락 부탁드립니다. :)</p>
 <!-- raw HTML omitted -->
 
 
@@ -489,26 +493,6 @@ Value : &lt;Subnet ID of Game server&rsquo;s subnet&gt;</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -540,6 +524,23 @@ Value : &lt;Subnet ID of Game server&rsquo;s subnet&gt;</p>
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -561,10 +562,10 @@ Value : &lt;Subnet ID of Game server&rsquo;s subnet&gt;</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/aws-edge-sample/ko/cloudfront/" title="CloudFront 연동하기"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/aws-edge-sample/ko/gameplay/" title="게임 실행하기"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/aws-edge-sample/ko/globalaccelerator/" title="Global Accelerator 구성하기" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/aws-edge-sample/ko/matchmaker/" title="웹 기반 매치메이커" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

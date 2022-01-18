@@ -88,6 +88,20 @@
   </url>
   
   <url>
+    <loc>/aws-edge-sample/ko/monitor/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/aws-edge-sample/en/monitor/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="/aws-edge-sample/ko/monitor/"
+                />
+  </url>
+  
+  <url>
     <loc>/aws-edge-sample/ko/categories/</loc>
     <xhtml:link
                 rel="alternate"

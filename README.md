@@ -20,7 +20,7 @@ Pull requests are always welcome. For major changes, please open an issue first 
 
 ## Architecture
 
-![Image](https://d1zrwss8zuawdm.cloudfront.net/webcard21-architecture1.png)
+![Image](https://d1zrwss8zuawdm.cloudfront.net/webcard21-architecture2.png)
 
 This architecture shows how to implement game servers for Global Service.
 
@@ -36,6 +36,9 @@ It caches matchmaking web-pages and accelerates dynamic API for optimized web-ba
 
 - AWS Systems Manager       
  : AWS Systems Manager is used for providing target subnet id to Matchmaker. Sample code uses Systems Manager - Parameter Stores, but it is also able to use Database to manage connection information.
+
+- Amazon CloudWatch RUM
+ : Amazon CloudWatch RUM is used for measuring end-user experiences for the application. You are able to evaluate end-user performance & errors & session information inside AWS Console Dashboard. You are also integrating AWS X-Ray, Amazon Cognito and Amazon CloudWatch Logs to analyze.
 
 ## How to Use
 
